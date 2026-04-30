@@ -40,7 +40,7 @@ function renderProject() {
 
     <div class="detail-section">
       <h4>Role</h4>
-      <p class="under-construction">Under Construction</p>
+      <p>${p.role}</p>
     </div>
 
     <div class="detail-section">
