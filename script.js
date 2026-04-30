@@ -40,26 +40,17 @@ function renderProject() {
 
     <div class="detail-section">
       <h4>Role</h4>
-      <p>${p.role}</p>
+      <p class="under-construction">Under Construction</p>
     </div>
 
     <div class="detail-section">
       <h4>Specifications</h4>
-      <div class="detail-specs">
-        ${p.specs.map(s => `
-          <div class="spec">
-            <span class="spec-key">${s.key}</span>
-            <span class="spec-val">${s.val}</span>
-          </div>
-        `).join('')}
-      </div>
+      <p class="under-construction">Under Construction</p>
     </div>
 
     <div class="detail-section">
       <h4>Stack</h4>
-      <div class="detail-stack">
-        ${p.stack.map(t => `<span class="stack-chip">${t}</span>`).join('')}
-      </div>
+      <p class="under-construction">Under Construction</p>
     </div>
   `;
 }
