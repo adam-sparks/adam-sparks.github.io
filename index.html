@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Sparks — Electrical & Computer Engineer</title>
+  <meta name="description" content="Adam Sparks — RF, embedded systems, and UAV engineering. Oregon State University ECE '26." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">
+        <span class="logo-mark">AS</span>
+        <span class="logo-divider"></span>
+        <span class="logo-text">Adam Sparks</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="hero-grid">
+      <div class="hero-meta">
+        <div class="meta-block">
+          <span class="meta-label">LOCATION</span>
+          <span class="meta-value">Corvallis, OR</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label">DISCIPLINE</span>
+          <span class="meta-value">ECE / RF / Embedded</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label">STATUS</span>
+          <span class="meta-value">
+            <span class="status-dot"></span>
+            Available May 2026
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-line"></span>
+          <span class="tag-text">PORTFOLIO / 2026</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">Engineering at the</span>
+          <span class="title-line"><em>edge</em> of the</span>
+          <span class="title-line">signal.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Senior Electrical &amp; Computer Engineering student at Oregon State, designing RF
+          systems, embedded firmware, and rugged hardware for mission-critical environments.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            View Projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-decoration" aria-hidden="true">
+        <svg viewBox="0 0 200 400" class="signal-svg">
+          <defs>
+            <linearGradient id="sigGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ea5b1f" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#ea5b1f" stop-opacity="0.1"/>
+            </linearGradient>
+          </defs>
+          <!-- Concentric arcs -->
+          <g stroke="url(#sigGrad)" fill="none" stroke-width="1">
+            <path d="M 100 200 m -40 0 a 40 40 0 1 0 80 0 a 40 40 0 1 0 -80 0"/>
+            <path d="M 100 200 m -70 0 a 70 70 0 1 0 140 0 a 70 70 0 1 0 -140 0" opacity="0.6"/>
+            <path d="M 100 200 m -100 0 a 100 100 0 1 0 200 0 a 100 100 0 1 0 -200 0" opacity="0.35"/>
+            <path d="M 100 200 m -130 0 a 130 130 0 1 0 260 0 a 130 130 0 1 0 -260 0" opacity="0.18"/>
+          </g>
+          <circle cx="100" cy="200" r="4" fill="#ea5b1f"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero-ticker">
+      <div class="ticker-track">
+        <span>RF SYSTEMS</span><span>•</span>
+        <span>ANTENNA DESIGN</span><span>•</span>
+        <span>STM32 FIRMWARE</span><span>•</span>
+        <span>UAV PLATFORMS</span><span>•</span>
+        <span>SAR TECHNOLOGY</span><span>•</span>
+        <span>KICAD / ADS / MATLAB</span><span>•</span>
+        <span>RF SYSTEMS</span><span>•</span>
+        <span>ANTENNA DESIGN</span><span>•</span>
+        <span>STM32 FIRMWARE</span><span>•</span>
+        <span>UAV PLATFORMS</span><span>•</span>
+        <span>SAR TECHNOLOGY</span><span>•</span>
+        <span>KICAD / ADS / MATLAB</span><span>•</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="section section-about" id="about">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-label">About</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lede">
+          I'm a senior ECE student at Oregon State University focused on the intersection
+          of <strong>radio frequency design</strong>, <strong>embedded systems</strong>,
+          and <strong>unmanned aerial platforms</strong>.
+        </p>
+        <p>
+          My work spans the full hardware stack — from cavity-model antenna design and
+          link budget analysis in MATLAB and Keysight ADS, to STM32 firmware development
+          and KiCad PCB layout. I gravitate toward problems where signal integrity,
+          mechanical ruggedness, and real-world reliability all matter at once.
+        </p>
+        <p>
+          Currently leading the firmware and RF isolation design for a search-and-rescue
+          repeater drone in collaboration with Marion County SAR. After graduation, I'm
+          looking for roles in defense, aerospace, and telecom — places where engineering
+          meets consequence.
+        </p>
+      </div>
+      <aside class="about-card">
+        <div class="card-row">
+          <span class="card-key">Education</span>
+          <span class="card-val">B.S. ECE, Oregon State University</span>
+        </div>
+        <div class="card-row">
+          <span class="card-key">Graduating</span>
+          <span class="card-val">June 2026</span>
+        </div>
+        <div class="card-row">
+          <span class="card-key">Capstone</span>
+          <span class="card-val">SAR Repeater Drone</span>
+        </div>
+        <div class="card-row">
+          <span class="card-key">Sponsor</span>
+          <span class="card-val">Marion County Search &amp; Rescue</span>
+        </div>
+        <div class="card-row">
+          <span class="card-key">Interests</span>
+          <span class="card-val">RF · UAV · Defense · Nuclear</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section section-projects" id="projects">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-label">Selected Projects</span>
+    </div>
+
+    <div class="projects-layout">
+      <!-- Project list sidebar -->
+      <aside class="project-list" role="tablist" aria-label="Project selector">
+        <button class="project-item active" data-project="sar-drone" role="tab" aria-selected="true">
+          <span class="item-num">P/01</span>
+          <span class="item-title">SAR Repeater Drone</span>
+          <span class="item-tags">VHF · UHF · STM32</span>
+        </button>
+        <button class="project-item" data-project="gps-antenna" role="tab" aria-selected="false">
+          <span class="item-num">P/02</span>
+          <span class="item-title">GPS L1 Patch Antenna</span>
+          <span class="item-tags">RHCP · ADS · MATLAB</span>
+        </button>
+        <button class="project-item" data-project="digital-comms" role="tab" aria-selected="false">
+          <span class="item-num">P/03</span>
+          <span class="item-title">Digital Comms Simulation</span>
+          <span class="item-tags">BPSK · SRRC · BER</span>
+        </button>
+        <button class="project-item" data-project="optical-fiber" role="tab" aria-selected="false">
+          <span class="item-num">P/04</span>
+          <span class="item-title">Optical Fiber Modeling</span>
+          <span class="item-tags">NRZ-OOK · PAM-4 · 16-QAM</span>
+        </button>
+        <button class="project-item" data-project="rf-isolation" role="tab" aria-selected="false">
+          <span class="item-num">P/05</span>
+          <span class="item-title">RF Isolation Filter</span>
+          <span class="item-tags">LC Bandpass · Stub Notch</span>
+        </button>
+      </aside>
+
+      <!-- Project detail panel -->
+      <article class="project-detail" role="tabpanel">
+        <!-- Content injected by JS -->
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-skills" id="skills">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-label">Capabilities</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>RF &amp; Antennas</h3>
+        <ul>
+          <li>Patch &amp; microstrip antenna design</li>
+          <li>Link budget analysis</li>
+          <li>Impedance matching / VSWR</li>
+          <li>Filter design (LC, stub)</li>
+          <li>Cavity model &amp; method of moments</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Embedded Systems</h3>
+        <ul>
+          <li>STM32 (F4 series)</li>
+          <li>C / embedded C</li>
+          <li>UART, SPI, I²C</li>
+          <li>SWD debugging, ITM/SWO</li>
+          <li>Real-time firmware</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Tools &amp; CAD</h3>
+        <ul>
+          <li>KiCad — schematic &amp; layout</li>
+          <li>Keysight ADS — Momentum</li>
+          <li>MATLAB — simulation &amp; analysis</li>
+          <li>LaTeX — IEEE format</li>
+          <li>Git, Linux, Obsidian</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Platforms</h3>
+        <ul>
+          <li>UAV / drone integration</li>
+          <li>Pixhawk &amp; MAVLink</li>
+          <li>SAR / mission-critical RF</li>
+          <li>VHF / UHF public safety</li>
+          <li>Rugged electronics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-contact" id="contact">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-label">Contact</span>
+    </div>
+    <div class="contact-content">
+      <h2 class="contact-title">
+        Let's build<br/>
+        <em>something</em> that<br/>
+        works in the field.
+      </h2>
+      <div class="contact-links">
+        <a href="mailto:adam@adam-sparks.com" class="contact-link">
+          <span class="link-key">Email</span>
+          <span class="link-val">adam@adam-sparks.com</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="https://github.com/adam-sparks" class="contact-link">
+          <span class="link-key">GitHub</span>
+          <span class="link-val">github.com/adam-sparks</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="link-key">LinkedIn</span>
+          <span class="link-val">linkedin.com/in/adam-sparks</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="link-key">Resume</span>
+          <span class="link-val">Download PDF</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 3V11M7 11L3 7M7 11L11 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Adam Sparks</span>
+      <span class="footer-meta">Designed &amp; built in Corvallis, Oregon</span>
+      <span class="footer-coords">44.5646° N · 123.2620° W</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
