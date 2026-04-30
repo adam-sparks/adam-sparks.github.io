@@ -1,6 +1,6 @@
 # adam-sparks.com
 
-Personal portfolio site for Adam Sparks — Electrical & Computer Engineering student at Oregon State University, focused on RF, embedded systems, and UAV platforms.
+Personal portfolio site for Adam Sparks - Electrical & Computer Engineering student at Oregon State University,
 
 ## Stack
 
