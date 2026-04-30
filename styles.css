@@ -248,8 +248,8 @@ em { font-style: italic; font-family: var(--font-display); }
 }
 
 .profile-photo {
-  width: 160px;
-  height: 160px;
+  width: 260px;
+  height: 320px;
   object-fit: cover;
   object-position: center top;
   flex-shrink: 0;
