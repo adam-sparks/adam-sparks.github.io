@@ -4,7 +4,7 @@ const project = {
   statusColor: '#ea5b1f',
   title: 'Search and Rescue UAV',
   subtitle: 'A flying radio relay for search-and-rescue teams operating in mountainous terrain.',
-  overview: `Capstone project sponsored by Marion County Search & Rescue. The system carries a VHF/UHF repeater payload to a ridge or saddle, lands, and operates from the ground — extending radio range for ground teams in terrain that breaks line-of-sight communication. The payload integrates two SA868-series modules with an STM32F411 controller routing audio between bands.`,
+  overview: `UAV-mounted cross-band radio repeater designed to improve communications for search and rescue, wildfire, and disaster response teams when terrain blocks normal radio line-of-sight. The system carries VHF/UHF radio hardware on a drone, flies to an elevated location such as a ridge or inaccessible area, lands, and acts as a temporary relay to extend the range of public safety radios.`,
   role: 'Firmware lead, RF isolation design, system integration',
   timeline: 'Sep 2025 — Jun 2026',
   specs: [
