@@ -237,6 +237,16 @@ em { font-style: italic; font-family: var(--font-display); }
   padding-top: 1rem;
 }
 
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  font-variation-settings: "opsz" 144;
+}
+
 .hero-profile {
   display: flex;
   gap: 2.5rem;
