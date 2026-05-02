@@ -508,6 +508,28 @@ em { font-style: italic; font-family: var(--font-display); }
 
 .detail-status .status-dot { width: 5px; height: 5px; }
 
+.detail-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.detail-title-row .detail-title {
+  margin-bottom: 0;
+}
+
+.detail-type {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  white-space: nowrap;
+}
+
 .detail-title {
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 3.5vw, 2.6rem);

@@ -6,7 +6,8 @@ const project = {
   subtitle: 'A flying radio relay for search-and-rescue teams operating in mountainous terrain.',
   overview: `UAV-mounted cross-band radio repeater designed to improve communications for search and rescue, wildfire, and disaster response teams when terrain blocks normal radio line-of-sight. The system carries VHF/UHF radio hardware on a drone, flies to an elevated location such as a ridge or inaccessible area, lands, and acts as a temporary relay to extend the range of public safety radios.`,
   role: 'RF Lead, Test and Validation Lead, PCB Design, Safety and Compliance Lead',
-  timeline: 'Sep 2025 — Jun 2026',
+  projectType: 'Senior Capstone Project',
+  timeline: 'Jan 2026 — Present',
   specs: [
     { key: 'RX Band', val: 'VHF 144 MHz' },
     { key: 'TX Band', val: 'UHF 450–460 MHz' },
@@ -30,7 +31,10 @@ function renderProject() {
       </span>
     </div>
 
-    <h2 class="detail-title">${p.title}</h2>
+    <div class="detail-title-row">
+      <h2 class="detail-title">${p.title}</h2>
+      <span class="detail-type">${p.projectType}</span>
+    </div>
     <p class="detail-subtitle">${p.subtitle}</p>
 
     <div class="detail-section">
