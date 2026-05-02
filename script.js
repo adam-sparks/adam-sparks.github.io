@@ -3,7 +3,7 @@ const project = {
   status: 'In Progress',
   statusColor: '#ea5b1f',
   title: 'Search and Rescue UAV',
-  subtitle: 'A flying radio relay for search-and-rescue teams operating in mountainous terrain.',
+  subtitle: 'A radio repeater system transported on a drone for rapid communications infrastructure.',
   overview: `UAV-mounted cross-band radio repeater designed to improve communications for search and rescue, wildfire, and disaster response teams when terrain blocks normal radio line-of-sight. The system carries VHF/UHF radio hardware on a drone, flies to an elevated location such as a ridge or inaccessible area, lands, and acts as a temporary relay to extend the range of public safety radios.`,
   role: 'RF Lead, Test and Validation Lead, PCB Design, Safety and Compliance Lead',
   projectType: 'Senior Capstone Project',
