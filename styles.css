@@ -318,7 +318,7 @@ em { font-style: italic; font-family: var(--font-display); }
 .btn-primary:hover svg { transform: translateX(3px); }
 
 .btn-ghost {
-  background: transparent;
+  background: #ffffff;
   color: var(--ink);
   border: 1px solid var(--rule);
 }
