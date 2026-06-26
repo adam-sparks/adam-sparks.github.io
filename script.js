@@ -1,13 +1,15 @@
 const project = {
   id: 'P/01',
-  status: 'In Progress',
-  statusColor: '#ea5b1f',
+  status: 'Completed',
+  statusColor: '#22c55e',
   title: 'Search and Rescue UAV',
   subtitle: 'A radio repeater system transported on a drone for rapid communications infrastructure.',
   overview: `UAV-mounted cross-band radio repeater designed to improve communications for search and rescue, wildfire, and disaster response teams when terrain blocks normal radio line-of-sight. The system carries VHF/UHF radio hardware on a drone, flies to an elevated location such as a ridge or inaccessible area, lands, and acts as a temporary relay to extend the range of public safety radios.`,
   role: 'RF Lead, Test and Validation Lead, PCB Design, Safety and Compliance Lead',
   projectType: 'Senior Capstone Project',
-  timeline: 'Jan 2026 — Present',
+  timeline: 'Jan 2026 — June 2026',
+  websiteUrl: 'https://capstone-website-zeta.vercel.app/',
+  image: 'capstone-drone.jpeg',
   specs: [
     { key: 'RX Band', val: 'VHF 144 MHz' },
     { key: 'TX Band', val: 'UHF 450–460 MHz' },
@@ -17,6 +19,13 @@ const project = {
     { key: 'Isolation', val: '>60 dB' },
   ],
   stack: ['STM32F411', 'SA868S VHF', 'SA858 UHF', 'Pixhawk 6C Mini', 'MAVLink', 'KiCad', 'C / Embedded'],
+  subprojects: [
+    {
+      title: 'Magnetic Loop Antenna',
+      description: 'Designed for 2-meter band FM simplex calling frequency: 146.520 MHz',
+      images: ['vhf_antenna.jpg', 'mag_ant_s11.jpeg'],
+    },
+  ],
 };
 
 function renderProject() {
@@ -37,25 +46,48 @@ function renderProject() {
     </div>
     <p class="detail-subtitle">${p.subtitle}</p>
 
-    <div class="detail-section">
-      <h4>Overview</h4>
-      <p>${p.overview}</p>
+    <div class="detail-body">
+      <div class="detail-text">
+        <div class="detail-section">
+          <h4>Overview</h4>
+          <p>${p.overview}</p>
+        </div>
+
+        <div class="detail-section">
+          <h4>Role</h4>
+          <p>${p.role}</p>
+        </div>
+
+        ${p.websiteUrl ? `<div class="detail-section">
+          <a href="${p.websiteUrl}" target="_blank" rel="noopener" class="detail-link">
+            View Project Website
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>` : ''}
+      </div>
+
+      ${p.image ? `<div class="detail-image-wrap">
+        <img src="${p.image}" alt="${p.title}" class="detail-image" />
+      </div>` : ''}
     </div>
 
-    <div class="detail-section">
-      <h4>Role</h4>
-      <p>${p.role}</p>
-    </div>
-
-    <div class="detail-section">
-      <h4>Specifications</h4>
-      <p class="under-construction">Under Construction</p>
-    </div>
-
-    <div class="detail-section">
-      <h4>Stack</h4>
-      <p class="under-construction">Under Construction</p>
-    </div>
+    ${p.subprojects && p.subprojects.length ? `
+    <div class="subprojects">
+      <h4 class="subprojects-label">Subprojects</h4>
+      <div class="subprojects-grid">
+        ${p.subprojects.map(s => `
+          <div class="subproject-card">
+            <div class="subproject-images">
+              ${(s.images || []).map(img => `<img src="${img}" alt="${s.title}" class="subproject-image" />`).join('')}
+            </div>
+            <span class="subproject-title">${s.title}</span>
+            ${s.description ? `<p class="subproject-desc">${s.description}</p>` : ''}
+          </div>
+        `).join('')}
+      </div>
+    </div>` : ''}
   `;
 }
 
