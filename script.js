@@ -21,9 +21,19 @@ const project = {
   stack: ['STM32F411', 'SA868S VHF', 'SA858 UHF', 'Pixhawk 6C Mini', 'MAVLink', 'KiCad', 'C / Embedded'],
   subprojects: [
     {
+      title: 'Radio Repeater',
+      bullets: ['VHF → UHF Crossband Analog Repeater', 'Designed and ordered custom 2-layer PCB.', 'STM32 Microcontroller'],
+      images: ['repeater_prototype.jpeg', 'repeater-system-level.webp'],
+    },
+    {
       title: 'Magnetic Loop Antenna',
-      description: 'Designed for 2-meter band FM simplex calling frequency: 146.520 MHz',
+      bullets: ['Designed for 2-meter band FM simplex calling frequency: 146.520 MHz'],
       images: ['vhf_antenna.jpg', 'mag_ant_s11.jpeg'],
+    },
+    {
+      title: '4-Layer Carrier PCB',
+      bullets: ['Designed to carry VHF module, microcontroller, and audio conditioning all on one board'],
+      images: ['four_layer.png'],
     },
   ],
 };
@@ -80,10 +90,10 @@ function renderProject() {
         ${p.subprojects.map(s => `
           <div class="subproject-card">
             <div class="subproject-images">
-              ${(s.images || []).map(img => `<img src="${img}" alt="${s.title}" class="subproject-image" />`).join('')}
+              ${(s.images || []).map(img => `<img src="${img}" alt="${s.title}" class="subproject-image lightbox-trigger" />`).join('')}
             </div>
             <span class="subproject-title">${s.title}</span>
-            ${s.description ? `<p class="subproject-desc">${s.description}</p>` : ''}
+            ${s.bullets && s.bullets.length ? `<ul class="subproject-bullets">${s.bullets.map(b => `<li>${b}</li>`).join('')}</ul>` : ''}
           </div>
         `).join('')}
       </div>
@@ -91,4 +101,30 @@ function renderProject() {
   `;
 }
 
-document.addEventListener('DOMContentLoaded', renderProject);
+function initLightbox() {
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.innerHTML = '<img class="lightbox-img" />';
+  document.body.appendChild(overlay);
+
+  const img = overlay.querySelector('.lightbox-img');
+
+  document.addEventListener('click', e => {
+    if (e.target.classList.contains('lightbox-trigger')) {
+      img.src = e.target.src;
+      img.alt = e.target.alt;
+      overlay.classList.add('open');
+    }
+  });
+
+  overlay.addEventListener('click', () => overlay.classList.remove('open'));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') overlay.classList.remove('open');
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderProject();
+  initLightbox();
+});
