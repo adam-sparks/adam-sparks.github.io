@@ -32,7 +32,7 @@ const project = {
     },
     {
       title: '4-Layer Carrier PCB',
-      bullets: ['Designed to carry VHF module, microcontroller, and audio conditioning all on one board'],
+      bullets: ['Designed to carry VHF module, microcontroller, and audio conditioning all on one board', 'Includes power regulation'],
       images: ['four_layer.png'],
     },
   ],
